@@ -12,8 +12,8 @@ public class LineDialog extends  JDialog{
     private JLabel itNamedLbl;
     private JLabel itCountLbl;
     private JLabel itPriceLbl;
-    private JButton okBtn;
-    private JButton canclBtn;
+    private JButton okButton;
+    private JButton cancelButton;
     
     public LineDialog(InvoiceFirstFrame frame){
         itNameField=new JTextField(20);
@@ -22,14 +22,14 @@ public class LineDialog extends  JDialog{
         itCountLbl=new JLabel("Line Count");
         itPriceField=new JTextField(20);
         itPriceLbl=new JLabel("Line Price");
-        okBtn=new JButton("OK");
-        canclBtn=new JButton("Cancel");
+        okButton=new JButton("OK");
+        cancelButton=new JButton("Cancel");
         
-        okBtn.setActionCommand("CreateNewLineOK");
-        canclBtn.setActionCommand("CancelCreateNewLine");
+        okButton.setActionCommand("CreateNewLineOK");
+        cancelButton.setActionCommand("CancelCreateNewLine");
         
-        okBtn.addActionListener(frame.getController());
-        canclBtn.addActionListener(frame.getController());
+        okButton.addActionListener(frame.getController());
+        cancelButton.addActionListener(frame.getController());
         setLayout(new GridLayout(4,2));
         add(itNamedLbl);
         add(itNameField);
@@ -37,8 +37,8 @@ public class LineDialog extends  JDialog{
         add(itCountField);
         add(itPriceLbl);
         add(itPriceField);
-        add(okBtn);
-        add(canclBtn);
+        add(okButton);
+        add(cancelButton);
         pack();
     }
 
